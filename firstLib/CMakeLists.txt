@@ -4,3 +4,5 @@ custom_add_library(firstLib
         include/firstLib/PublicClass.hpp
         src/PublicClass.cc
         )
+
+add_subdirectory(test)

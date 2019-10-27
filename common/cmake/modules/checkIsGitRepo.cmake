@@ -1,0 +1,7 @@
+macro(isGitRepo)
+    find_package(Git QUIET)
+    if (GIT_FOUND AND EXISTS "${PROJECT_SOURCE_DIR}/.git")
+    else ()
+        message(FATAL_ERROR "The Project is not a git repo and/or git is not installed")
+    endif ()
+endmacro()
